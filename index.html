@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arquivo Vivo: um mapa pessoal de ideias, sistemas e aprendizados.">
+  <title>Arquivo Vivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#inicio" aria-label="Arquivo Vivo, início"><span>AV</span> arquivo vivo</a>
+    <nav aria-label="Navegação principal">
+      <a href="#mapa">Mapa</a>
+      <a href="#principios">Princípios</a>
+      <a href="#trilha">Próxima trilha</a>
+    </nav>
+    <div class="topbar-meta"><span class="status-dot"></span> edição 01 / 2026</div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-kicker">índice de trabalho <span>///</span> henrique monteiro</div>
+      <div class="hero-grid">
+        <div>
+          <h1 id="hero-title">Ideias que<br><em>ganham forma.</em></h1>
+          <p class="hero-copy">Um arquivo para atravessar pesquisa, código e criação sem perder o fio do que foi aprendido.</p>
+          <a class="hero-link" href="#mapa">Entrar no mapa <span>↘</span></a>
+        </div>
+        <div class="hero-note">
+          <span class="note-label">nota de método</span>
+          <p>Separar fonte, hipótese e experimento. O arquivo não decide por você; ele torna o próximo passo visível.</p>
+          <div class="hero-stamp">V.01<br><strong>LIVE</strong></div>
+        </div>
+      </div>
+      <div class="hero-footer"><span>03 linhas de pesquisa</span><span>12 regras extraídas</span><span>01 experimento ativo</span></div>
+    </section>
+
+    <section class="map-section" id="mapa" aria-labelledby="map-title">
+      <div class="section-heading"><span class="section-index">01</span><div><p class="eyebrow">atlas de trabalho</p><h2 id="map-title">O que está<br>em movimento.</h2></div></div>
+      <div class="controls" aria-label="Filtros do arquivo">
+        <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Buscar no arquivo" autocomplete="off"></label>
+        <div class="filter-group" role="group" aria-label="Filtrar por área">
+          <button class="filter is-active" data-filter="all">Tudo</button>
+          <button class="filter" data-filter="sistema">Sistemas</button>
+          <button class="filter" data-filter="estudo">Estudo</button>
+          <button class="filter" data-filter="criação">Criação</button>
+        </div>
+      </div>
+      <div class="atlas" id="atlas">
+        <article class="atlas-card featured" data-category="sistema" data-search="banco ficticio transacao postgres api produto">
+          <div class="card-top"><span class="card-number">A / 01</span><span class="card-tag">sistema</span></div>
+          <h3>Banco fictício</h3><p>Modelar o invisível: saldos, transferências e empréstimos precisam preservar a mesma verdade em cada camada.</p>
+          <div class="card-rule">invariante <strong>saldo + histórico = realidade</strong></div>
+          <a href="https://github.com/henriquemonteiro098/banco-ficticio" class="card-action" target="_blank" rel="noreferrer">abrir origem ↗</a>
+        </article>
+        <article class="atlas-card" data-category="estudo" data-search="valor dinheiro inflacao ipca selic cvm notebooklm pesquisa">
+          <div class="card-top"><span class="card-number">B / 02</span><span class="card-tag">estudo</span></div>
+          <h3>Valor do dinheiro</h3><p>Fontes públicas viram perguntas, cálculos e limites claros para que aprender não se confunda com pedir recomendação.</p>
+          <div class="card-rule">pergunta <strong>o que a fonte não cobre?</strong></div>
+          <a href="../Projetos/projects/STUDY_GUIDE.md" class="card-action">ler caderno ↗</a>
+        </article>
+        <article class="atlas-card" data-category="criação" data-search="ponto cego retratos ia video pipeline ideia campanha prompt">
+          <div class="card-top"><span class="card-number">C / 03</span><span class="card-tag">criação</span></div>
+          <h3>Oficina de imagens</h3><p>Uma ideia é uma pasta. O estado fica visível no estágio, no frontmatter e no próximo movimento.</p>
+          <div class="card-rule">ritmo <strong>fonte → hipótese → peça</strong></div>
+          <a href="../Projetos/ponto-cego/CLAUDE.md" class="card-action">ver protocolo ↗</a>
+        </article>
+        <article class="atlas-card" data-category="sistema" data-search="observacoes ia processo skill aprendizado vscode">
+          <div class="card-top"><span class="card-number">D / 04</span><span class="card-tag">sistema</span></div>
+          <h3>Memória de processo</h3><p>Registrar fricções e decisões torna o próximo trabalho melhor antes mesmo de começar.</p>
+          <div class="card-rule">loop <strong>fazer → observar → ajustar</strong></div>
+          <a href="skill-observations/log.md" class="card-action">abrir registro ↗</a>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>Nenhum fragmento encontrado. Tente outra palavra.</p>
+    </section>
+
+    <section class="principles-section" id="principios" aria-labelledby="principles-title">
+      <div class="section-heading light"><span class="section-index">02</span><div><p class="eyebrow">regras extraídas</p><h2 id="principles-title">O que não pode<br>se perder.</h2></div></div>
+      <div class="principles-list">
+        <article><span>01</span><div><h3>Estado é evidência</h3><p>Uma pasta, um registro ou um saldo só vale quando seu estado pode ser conferido na fonte.</p></div></article>
+        <article><span>02</span><div><h3>Transação é compromisso</h3><p>Operações que mudam a realidade precisam ser atômicas, reversíveis e auditáveis.</p></div></article>
+        <article><span>03</span><div><h3>Fonte antes da síntese</h3><p>Todo resumo deve manter a origem e dizer explicitamente onde termina o que sabemos.</p></div></article>
+        <article><span>04</span><div><h3>Uma variável por vez</h3><p>Experimentos criativos ficam legíveis quando cada iteração muda uma coisa de propósito.</p></div></article>
+      </div>
+    </section>
+
+    <section class="trail-section" id="trilha" aria-labelledby="trail-title">
+      <div class="trail-copy"><p class="eyebrow">03 / próxima trilha</p><h2 id="trail-title">Do arquivo<br>para a bancada.</h2><p>O próximo projeto testa uma hipótese simples: conhecimento fica mais útil quando pode ser consultado e movido como matéria de trabalho.</p></div>
+      <ol class="trail-list"><li><span>01</span><strong>indexar</strong><small>reunir títulos, fontes e estados</small></li><li><span>02</span><strong>conectar</strong><small>ligar uma ideia à regra que a sustenta</small></li><li><span>03</span><strong>experimentar</strong><small>transformar a conexão em uma pequena entrega</small></li></ol>
+    </section>
+  </main>
+  <footer class="footer"><span>arquivo vivo / experimento 01</span><span>feito para continuar</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
